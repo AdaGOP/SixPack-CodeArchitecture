@@ -24,7 +24,6 @@ class HistoryTableViewController: UIViewController, UITableViewDataSource{
     
     private func setupView(){
         //Setup the view delegate / data source here
-        historyTable.dataSource = self
         dateFormat.dateFormat = "Y-M-d H:mm"
     }
     
@@ -43,7 +42,6 @@ class HistoryTableViewController: UIViewController, UITableViewDataSource{
         }catch{
             print("error fetching data from order")
         }
-        
         
     }
     

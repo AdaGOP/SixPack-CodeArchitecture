@@ -8,14 +8,13 @@
 
 import Foundation
 
-public class Bowl: NSObject,NSCoding{
+public class Bowl: NSObject, NSCoding {
 
     var ingredients: [IngredientType: [String:Double] ]  = [:]
     
     override init(){
         super.init()
     }
-    
     
     public func encode(with aCoder: NSCoder) {
         var temp = [String:[String:Double]]()
@@ -42,10 +41,6 @@ public class Bowl: NSObject,NSCoding{
         
     }
 }
-
-
-
-
 
 // Add business case functionality
 extension Bowl{
@@ -116,9 +111,6 @@ extension Bowl{
             return finalPrice + bowlType.rawValue
         }
     }
-    
-    
-
     
     // total sum ingredient for each type
     func sumTotalIngredients(type: IngredientType) -> Double {
@@ -226,7 +218,19 @@ extension Bowl{
 }
 
 
-extension Bowl{
+extension Bowl {
+    
+    /// Modified by: Zein
+    /// Dictionary: Collection
+    ///
+    /// I can effectively use Collection Types in Swift
+    /// Since each Ingredients
+    /// https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html
+    ///
+    /// - Important: `TEC072    I can effectively use Collection Types in Swift`
+    ///
+
+    
     static var dataMock: Bowl = {
         let bowl = Bowl()
         bowl.ingredients[IngredientType.base] = ["Brown Rice": 0.0, "Romaine Lettuce": 0.0, "Sweet Potato": 0.0, "Whole-wheat Pasta": 1.0, "Baby Spinach": 0.0, "Quinoa": 0.0]

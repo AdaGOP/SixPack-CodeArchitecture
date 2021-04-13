@@ -34,7 +34,7 @@ class BowlView: UIView {
     public func setView(with customer: Customer, bowl: Bowl){
         let (bowlTypeDescription, bowlTypeInfo) = bowl.getBowlTypeDetailInfo()
         bowlTypeLabel?.text = "Hi \(customer.name),"
-        buildInfoLabel?.text = "You have \(bowlTypeDescription) bowl. \(bowlTypeInfo)"
+        buildInfoLabel?.text = "You have *Category* as `\(bowlTypeDescription) bowl`. \(bowlTypeInfo)"
         bowlContentTableView?.reloadData()
         priceLabel?.text = "\(bowl.price)K"
     }

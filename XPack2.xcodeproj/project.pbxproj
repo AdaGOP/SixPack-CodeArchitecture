@@ -26,6 +26,8 @@
 		7DB29A6C2123C5BD00C4538B /* HistoryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB29A6B2123C5BD00C4538B /* HistoryDetail.storyboard */; };
 		7DB29A6E2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB29A6D2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift */; };
 		7DB29A9521241EF400C4538B /* HistoryDetailCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB29A9421241EF400C4538B /* HistoryDetailCollectionHeader.swift */; };
+		E647936C2625E7640055AF4F /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E647936B2625E7640055AF4F /* History.storyboard */; };
+		E6479371262600640055AF4F /* AlertMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6479370262600640055AF4F /* AlertMessageHelper.swift */; };
 		E652D2FA252CC7D900EE3ACC /* IngridientChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652D2F9252CC7D900EE3ACC /* IngridientChoiceView.swift */; };
 		F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40742052117E23C00F6CD12 /* AppDelegate.swift */; };
 		F40742082117E23C00F6CD12 /* CustomerInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40742072117E23C00F6CD12 /* CustomerInformationViewController.swift */; };
@@ -76,6 +78,8 @@
 		7DB29A6B2123C5BD00C4538B /* HistoryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryDetail.storyboard; sourceTree = "<group>"; };
 		7DB29A6D2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		7DB29A9421241EF400C4538B /* HistoryDetailCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionHeader.swift; sourceTree = "<group>"; };
+		E647936B2625E7640055AF4F /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		E6479370262600640055AF4F /* AlertMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessageHelper.swift; sourceTree = "<group>"; };
 		E652D2F9252CC7D900EE3ACC /* IngridientChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientChoiceView.swift; sourceTree = "<group>"; };
 		F40742022117E23C00F6CD12 /* XPack2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPack2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40742052117E23C00F6CD12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */,
+				E647936B2625E7640055AF4F /* History.storyboard */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */,
 				7D02B804252C3D6500A09235 /* XPackAPIHelper.swift */,
 				7D05C7A925374C5D00499D32 /* StringCryptoHelper.swift */,
+				E6479370262600640055AF4F /* AlertMessageHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 				F4892FA1211EE22F00D5B92E /* SFCompactText-Regular.otf in Resources */,
 				F407420D2117E23D00F6CD12 /* Assets.xcassets in Resources */,
 				7D02B807252C40B900A09235 /* .gitignore in Resources */,
+				E647936C2625E7640055AF4F /* History.storyboard in Resources */,
 				F4F4303C2119B80000B2B859 /* ChooseMenu.storyboard in Resources */,
 				F4892FA0211EE22F00D5B92E /* SFCompactText-Medium.otf in Resources */,
 				F4FE7970211A8D8B0068674F /* IngridientChoice.storyboard in Resources */,
@@ -445,6 +452,7 @@
 				7D02B7FD252C162100A09235 /* IngredientType.swift in Sources */,
 				F4F2AC85211D818A00374657 /* CheckoutViewController.swift in Sources */,
 				F4BC78062119499B00F1C758 /* Bowl.swift in Sources */,
+				E6479371262600640055AF4F /* AlertMessageHelper.swift in Sources */,
 				F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */,
 				F4BC77FF2119361C00F1C758 /* IngridientSelectionViewController.swift in Sources */,
 				7DB29A6A2123C2EB00C4538B /* HistoryDetailCollectionViewController.swift in Sources */,

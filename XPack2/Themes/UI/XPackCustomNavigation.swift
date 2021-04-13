@@ -3,7 +3,7 @@
 //  AYO CLEAN
 //
 //  Created by zein rezky chandra on 30/06/18.
-//  Copyright © 2018 Alumagubi. All rights reserved.
+//  Copyright © 2018 Apple Developer Academy. All rights reserved.
 //
 
 import Foundation
