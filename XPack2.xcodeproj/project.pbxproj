@@ -20,13 +20,7 @@
 		7D05C7AE25374D0100499D32 /* URLRequest-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05C7AD25374D0100499D32 /* URLRequest-Extension.swift */; };
 		7D05C7B125374D2800499D32 /* Sample1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05C7B025374D2800499D32 /* Sample1.swift */; };
 		7D87676D21211C4A00B0CE21 /* XPackCustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87676C21211C4A00B0CE21 /* XPackCustomNavigation.swift */; };
-		7D87677321211F1800B0CE21 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */; };
 		7D876775212121CD00B0CE21 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D876774212121CD00B0CE21 /* CoreDataHelper.swift */; };
-		7DB29A6A2123C2EB00C4538B /* HistoryDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB29A692123C2EB00C4538B /* HistoryDetailCollectionViewController.swift */; };
-		7DB29A6C2123C5BD00C4538B /* HistoryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB29A6B2123C5BD00C4538B /* HistoryDetail.storyboard */; };
-		7DB29A6E2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB29A6D2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift */; };
-		7DB29A9521241EF400C4538B /* HistoryDetailCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB29A9421241EF400C4538B /* HistoryDetailCollectionHeader.swift */; };
-		E647936C2625E7640055AF4F /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E647936B2625E7640055AF4F /* History.storyboard */; };
 		E6479371262600640055AF4F /* AlertMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6479370262600640055AF4F /* AlertMessageHelper.swift */; };
 		E652D2FA252CC7D900EE3ACC /* IngridientChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652D2F9252CC7D900EE3ACC /* IngridientChoiceView.swift */; };
 		F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40742052117E23C00F6CD12 /* AppDelegate.swift */; };
@@ -35,10 +29,6 @@
 		F407420D2117E23D00F6CD12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F407420C2117E23D00F6CD12 /* Assets.xcassets */; };
 		F40742102117E23D00F6CD12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F407420E2117E23D00F6CD12 /* LaunchScreen.storyboard */; };
 		F432E628211E712A00C6C663 /* XPackColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432E627211E712A00C6C663 /* XPackColours.swift */; };
-		F432E62B211E763C00C6C663 /* PaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432E62A211E763C00C6C663 /* PaymentMethodViewController.swift */; };
-		F432E62E211E7AC200C6C663 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432E62D211E7AC200C6C663 /* PaymentDetailViewController.swift */; };
-		F432E631211E81E100C6C663 /* PaymentMethod.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F432E62F211E81E100C6C663 /* PaymentMethod.storyboard */; };
-		F432E633211E81F300C6C663 /* PaymentDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F432E632211E81F300C6C663 /* PaymentDetail.storyboard */; };
 		F4892FA0211EE22F00D5B92E /* SFCompactText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4892F9D211EE22F00D5B92E /* SFCompactText-Medium.otf */; };
 		F4892FA1211EE22F00D5B92E /* SFCompactText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4892F9E211EE22F00D5B92E /* SFCompactText-Regular.otf */; };
 		F4892FA2211EE22F00D5B92E /* SFCompactText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4892F9F211EE22F00D5B92E /* SFCompactText-Bold.otf */; };
@@ -47,9 +37,6 @@
 		F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */; };
 		F4BC78062119499B00F1C758 /* Bowl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC78052119499B00F1C758 /* Bowl.swift */; };
 		F4DA8AA3211E9BE300D02626 /* NumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */; };
-		F4F2AC85211D818A00374657 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AC84211D818A00374657 /* CheckoutViewController.swift */; };
-		F4F2AC87211D852900374657 /* CheckoutItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AC86211D852900374657 /* CheckoutItemTableViewCell.swift */; };
-		F4F2FB59211BE45B003898E6 /* CheckoutPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2FB57211BE45B003898E6 /* CheckoutPage.storyboard */; };
 		F4F2FB5B211BE4B5003898E6 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2FB5A211BE4B5003898E6 /* Customer.swift */; };
 		F4F430372119960200B2B859 /* IngredientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F430362119960200B2B859 /* IngredientData.swift */; };
 		F4F430392119B5ED00B2B859 /* BowlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F430382119B5ED00B2B859 /* BowlViewController.swift */; };
@@ -72,13 +59,7 @@
 		7D05C7AD25374D0100499D32 /* URLRequest-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest-Extension.swift"; sourceTree = "<group>"; };
 		7D05C7B025374D2800499D32 /* Sample1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample1.swift; sourceTree = "<group>"; };
 		7D87676C21211C4A00B0CE21 /* XPackCustomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XPackCustomNavigation.swift; sourceTree = "<group>"; };
-		7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		7D876774212121CD00B0CE21 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		7DB29A692123C2EB00C4538B /* HistoryDetailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionViewController.swift; sourceTree = "<group>"; };
-		7DB29A6B2123C5BD00C4538B /* HistoryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryDetail.storyboard; sourceTree = "<group>"; };
-		7DB29A6D2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionViewCell.swift; sourceTree = "<group>"; };
-		7DB29A9421241EF400C4538B /* HistoryDetailCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionHeader.swift; sourceTree = "<group>"; };
-		E647936B2625E7640055AF4F /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		E6479370262600640055AF4F /* AlertMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessageHelper.swift; sourceTree = "<group>"; };
 		E652D2F9252CC7D900EE3ACC /* IngridientChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientChoiceView.swift; sourceTree = "<group>"; };
 		F40742022117E23C00F6CD12 /* XPack2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPack2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,10 +70,6 @@
 		F407420F2117E23D00F6CD12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F40742112117E23D00F6CD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F432E627211E712A00C6C663 /* XPackColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPackColours.swift; sourceTree = "<group>"; };
-		F432E62A211E763C00C6C663 /* PaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodViewController.swift; sourceTree = "<group>"; };
-		F432E62D211E7AC200C6C663 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
-		F432E630211E81E100C6C663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XPack2/Pages/checkout/XPack2/Pages/Bowl/XPack2/View/Base.lproj/PaymentMethod.storyboard; sourceTree = "<group>"; };
-		F432E632211E81F300C6C663 /* PaymentDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymentDetail.storyboard; sourceTree = "<group>"; };
 		F4892F9D211EE22F00D5B92E /* SFCompactText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Medium.otf"; sourceTree = "<group>"; };
 		F4892F9E211EE22F00D5B92E /* SFCompactText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Regular.otf"; sourceTree = "<group>"; };
 		F4892F9F211EE22F00D5B92E /* SFCompactText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Bold.otf"; sourceTree = "<group>"; };
@@ -101,9 +78,6 @@
 		F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTableViewCell.swift; sourceTree = "<group>"; };
 		F4BC78052119499B00F1C758 /* Bowl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowl.swift; sourceTree = "<group>"; };
 		F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberHelper.swift; sourceTree = "<group>"; };
-		F4F2AC84211D818A00374657 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
-		F4F2AC86211D852900374657 /* CheckoutItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutItemTableViewCell.swift; sourceTree = "<group>"; };
-		F4F2FB58211BE45B003898E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XPack2/Pages/Bowl/XPack2/View/Base.lproj/CheckoutPage.storyboard; sourceTree = "<group>"; };
 		F4F2FB5A211BE4B5003898E6 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		F4F430362119960200B2B859 /* IngredientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientData.swift; sourceTree = "<group>"; };
 		F4F430382119B5ED00B2B859 /* BowlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlViewController.swift; sourceTree = "<group>"; };
@@ -196,26 +170,6 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
-		7D87676E21211E8900B0CE21 /* History */ = {
-			isa = PBXGroup;
-			children = (
-				7D87677221211F1800B0CE21 /* HistoryTableViewController.swift */,
-				E647936B2625E7640055AF4F /* History.storyboard */,
-			);
-			path = History;
-			sourceTree = "<group>";
-		};
-		7DB29A682123C2D200C4538B /* HistoryDetail */ = {
-			isa = PBXGroup;
-			children = (
-				7DB29A692123C2EB00C4538B /* HistoryDetailCollectionViewController.swift */,
-				7DB29A6B2123C5BD00C4538B /* HistoryDetail.storyboard */,
-				7DB29A9421241EF400C4538B /* HistoryDetailCollectionHeader.swift */,
-				7DB29A6D2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift */,
-			);
-			path = HistoryDetail;
-			sourceTree = "<group>";
-		};
 		F40741F92117E23C00F6CD12 = {
 			isa = PBXGroup;
 			children = (
@@ -248,24 +202,6 @@
 				7D3D1966252C12D100FF2C7D /* Utilities */,
 			);
 			path = XPack2;
-			sourceTree = "<group>";
-		};
-		F432E629211E761E00C6C663 /* payment */ = {
-			isa = PBXGroup;
-			children = (
-				F432E62F211E81E100C6C663 /* PaymentMethod.storyboard */,
-				F432E62A211E763C00C6C663 /* PaymentMethodViewController.swift */,
-			);
-			path = payment;
-			sourceTree = "<group>";
-		};
-		F432E62C211E7AAC00C6C663 /* payment detail */ = {
-			isa = PBXGroup;
-			children = (
-				F432E632211E81F300C6C663 /* PaymentDetail.storyboard */,
-				F432E62D211E7AC200C6C663 /* PaymentDetailViewController.swift */,
-			);
-			path = "payment detail";
 			sourceTree = "<group>";
 		};
 		F468E290211E863000C859DC /* Fonts */ = {
@@ -301,16 +237,6 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		F4F2FB5C211BEC2B003898E6 /* checkout */ = {
-			isa = PBXGroup;
-			children = (
-				F4F2FB57211BE45B003898E6 /* CheckoutPage.storyboard */,
-				F4F2AC84211D818A00374657 /* CheckoutViewController.swift */,
-				F4F2AC86211D852900374657 /* CheckoutItemTableViewCell.swift */,
-			);
-			path = checkout;
-			sourceTree = "<group>";
-		};
 		F4FE7971211A98D30068674F /* Bowl (MVC) */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,11 +270,6 @@
 		F4FE7974211A99920068674F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				7DB29A682123C2D200C4538B /* HistoryDetail */,
-				7D87676E21211E8900B0CE21 /* History */,
-				F432E62C211E7AAC00C6C663 /* payment detail */,
-				F432E629211E761E00C6C663 /* payment */,
-				F4F2FB5C211BEC2B003898E6 /* checkout */,
 				F4FE7972211A98FD0068674F /* Ingredient (MVC) */,
 				F4FE7971211A98D30068674F /* Bowl (MVC) */,
 				F4FE7973211A99200068674F /* Customer form */,
@@ -416,15 +337,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4892FA2211EE22F00D5B92E /* SFCompactText-Bold.otf in Resources */,
-				F432E633211E81F300C6C663 /* PaymentDetail.storyboard in Resources */,
 				F40742102117E23D00F6CD12 /* LaunchScreen.storyboard in Resources */,
-				F4F2FB59211BE45B003898E6 /* CheckoutPage.storyboard in Resources */,
-				F432E631211E81E100C6C663 /* PaymentMethod.storyboard in Resources */,
-				7DB29A6C2123C5BD00C4538B /* HistoryDetail.storyboard in Resources */,
 				F4892FA1211EE22F00D5B92E /* SFCompactText-Regular.otf in Resources */,
 				F407420D2117E23D00F6CD12 /* Assets.xcassets in Resources */,
 				7D02B807252C40B900A09235 /* .gitignore in Resources */,
-				E647936C2625E7640055AF4F /* History.storyboard in Resources */,
 				F4F4303C2119B80000B2B859 /* ChooseMenu.storyboard in Resources */,
 				F4892FA0211EE22F00D5B92E /* SFCompactText-Medium.otf in Resources */,
 				F4FE7970211A8D8B0068674F /* IngridientChoice.storyboard in Resources */,
@@ -439,23 +355,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DB29A9521241EF400C4538B /* HistoryDetailCollectionHeader.swift in Sources */,
 				7D02B7FF252C164400A09235 /* BowlType.swift in Sources */,
 				F40742082117E23C00F6CD12 /* CustomerInformationViewController.swift in Sources */,
 				7D05C7A825374C2500499D32 /* Resources.swift in Sources */,
 				F432E628211E712A00C6C663 /* XPackColours.swift in Sources */,
-				F432E62E211E7AC200C6C663 /* PaymentDetailViewController.swift in Sources */,
 				7D876775212121CD00B0CE21 /* CoreDataHelper.swift in Sources */,
-				F4F2AC87211D852900374657 /* CheckoutItemTableViewCell.swift in Sources */,
-				7D87677321211F1800B0CE21 /* HistoryTableViewController.swift in Sources */,
 				7D05C7AA25374C5D00499D32 /* StringCryptoHelper.swift in Sources */,
 				7D02B7FD252C162100A09235 /* IngredientType.swift in Sources */,
-				F4F2AC85211D818A00374657 /* CheckoutViewController.swift in Sources */,
 				F4BC78062119499B00F1C758 /* Bowl.swift in Sources */,
 				E6479371262600640055AF4F /* AlertMessageHelper.swift in Sources */,
 				F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */,
 				F4BC77FF2119361C00F1C758 /* IngridientSelectionViewController.swift in Sources */,
-				7DB29A6A2123C2EB00C4538B /* HistoryDetailCollectionViewController.swift in Sources */,
 				7D05C79F2536A9FD00499D32 /* BowlView.swift in Sources */,
 				F4BC77FB2119306200F1C758 /* XPack.xcdatamodeld in Sources */,
 				F4F430392119B5ED00B2B859 /* BowlViewController.swift in Sources */,
@@ -464,7 +374,6 @@
 				F4FE796E211A84F60068674F /* BowlDetailTableViewCell.swift in Sources */,
 				F4F430372119960200B2B859 /* IngredientData.swift in Sources */,
 				7D05C7AE25374D0100499D32 /* URLRequest-Extension.swift in Sources */,
-				F432E62B211E763C00C6C663 /* PaymentMethodViewController.swift in Sources */,
 				7D02B805252C3D6500A09235 /* XPackAPIHelper.swift in Sources */,
 				7D87676D21211C4A00B0CE21 /* XPackCustomNavigation.swift in Sources */,
 				7D05C7A525374BE900499D32 /* WebService.swift in Sources */,
@@ -472,7 +381,6 @@
 				F4DA8AA3211E9BE300D02626 /* NumberHelper.swift in Sources */,
 				F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */,
 				E652D2FA252CC7D900EE3ACC /* IngridientChoiceView.swift in Sources */,
-				7DB29A6E2123C66F00C4538B /* HistoryDetailCollectionViewCell.swift in Sources */,
 				7D05C7A3253749B600499D32 /* XPackModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,22 +402,6 @@
 				F407420F2117E23D00F6CD12 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F432E62F211E81E100C6C663 /* PaymentMethod.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F432E630211E81E100C6C663 /* Base */,
-			);
-			name = PaymentMethod.storyboard;
-			sourceTree = "<group>";
-		};
-		F4F2FB57211BE45B003898E6 /* CheckoutPage.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4F2FB58211BE45B003898E6 /* Base */,
-			);
-			name = CheckoutPage.storyboard;
 			sourceTree = "<group>";
 		};
 		F4F4303A2119B80000B2B859 /* ChooseMenu.storyboard */ = {

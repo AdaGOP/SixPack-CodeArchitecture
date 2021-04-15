@@ -62,14 +62,7 @@ class BowlViewController: UIViewController {
     }
 
     func showAlertMessage(){
-        // create the alert
-        let alert = UIAlertController(title: "LO's Information", message: "At this page you'll learn how to store the Ingredients value using `struct & class` and define the category based on it using `enum`", preferredStyle: UIAlertController.Style.alert)
-
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
+        self.popupAlert(title: "LO's Information", message: "At this page you'll learn how to store the Ingredients value using `struct & class` and define the category based on it using `enum`", actionTitles: ["Ok"], actions: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,21 +71,13 @@ class BowlViewController: UIViewController {
     }
     
     
-    @IBAction func goToCheckoutPage(_ sender: Any) {
-        performSegue(withIdentifier: "GoToCheckoutPage", sender: nil)
-    }
-
     // Prepare segue for passing value to other view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? IngridientSelectionViewController {
             let ip = sender as! IndexPath
             dest.ingredientType = bowlIngredients[ip.row]
             dest.bowl = bowl
-        }
-        
-        if let dest = segue.destination as? CheckoutViewController {
-            dest.bowl = bowl
-        }
+        }        
     }
 }
 

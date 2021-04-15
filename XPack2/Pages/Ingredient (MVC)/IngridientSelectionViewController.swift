@@ -12,8 +12,20 @@ class IngridientSelectionViewController: UIViewController {
     
     @IBOutlet weak var ingredientsView: IngridientChoiceView!
     
+    /// Modified by: Zein
+    /// Enumeration
+    ///
+    /// I know how to work with enumeration in Swift
+    /// https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html
+    ///
+    /// - Important: `TEC069    I know how to work with enumeration in Swift`
+    ///
+
+    /// Since IngredientType are enum, we can get the value based on it's rawValue which stored inside IngredientData
+    /// Please refer to IngredientData.swift, It's `class` to store the data of each IngredientType
+
     var ingredientType: IngredientType = .base {
-        didSet{
+        didSet {
             switch ingredientType {
             case .base:
                 ingredients = IngredientData().bases
@@ -73,16 +85,17 @@ extension IngridientSelectionViewController: UITableViewDelegate, UITableViewDat
 extension IngridientSelectionViewController: IngridientCellProtocol {
     // return value to be displayed in the cell
     func setQuantityLabel(ingridientName: String, stepper: UIStepper) -> String {
-        
-        selectedIngredients[ingridientName] = stepper.value
-        bowl.ingredients[ingredientType] = selectedIngredients
-        ingredientsView.updatePriceBarItem(price: bowl.price)
-        
-        let (isCharged, chargeAmount) = bowl.isChargedForAdditionalServing(type: ingredientType)
-        if isCharged != isChargedForAdditionalServing {
-            isChargedForAdditionalServing = isCharged
-            additionalCharge = chargeAmount
-            ingredientsView.tableView?.reloadData()
+        self.popupAlert(title: "Notice", message: "When you change the value of it's quantity, it will update the value of \(ingridientName) in the Array, and use it's value to calculate price at the bottom.", actionTitles: ["Ok"]) { (action) in
+            self.selectedIngredients[ingridientName] = stepper.value
+            self.bowl.ingredients[self.ingredientType] = self.selectedIngredients
+            self.ingredientsView.updatePriceBarItem(price: self.bowl.price)
+            
+            let (isCharged, chargeAmount) = self.bowl.isChargedForAdditionalServing(type: self.ingredientType)
+            if isCharged != self.isChargedForAdditionalServing {
+                self.isChargedForAdditionalServing = isCharged
+                self.additionalCharge = chargeAmount
+                self.ingredientsView.tableView?.reloadData()
+            }
         }
         
         return getDisplayedQuantityValueFromStepper(value: stepper.value,for: ingredientType)
@@ -92,7 +105,18 @@ extension IngridientSelectionViewController: IngridientCellProtocol {
 
 
 // MARK:- Page Business Logic - This is Testable
-extension IngridientSelectionViewController{
+extension IngridientSelectionViewController {
+    /// Modified by: Zein
+    /// Conditional Statement
+    ///
+    /// I can use Conditional Statements in Swift ( if/else; switch/case;  guard; Comparison Operators; )
+    /// https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html
+    ///
+    /// - Important: `TEC055    I can use Conditional Statements in Swift`
+    ///
+    
+    /// Use conditional statement to check which IngredientType is and return the value
+    
     func getDisplayedQuantityValueFromStepper(value: Double,for ingredientType: IngredientType) -> String {
         if ingredientType == .protein {
             if value == 1.0 {

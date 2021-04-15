@@ -10,6 +10,17 @@ import Foundation
 
 class IngredientData {
     
+    /// Modified by: Zein
+    /// Array: Collection
+    ///
+    /// I can effectively use Collection Types in Swift
+    /// https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html
+    ///
+    /// - Important: `TEC072    I can effectively use Collection Types in Swift`
+    ///
+
+    /// We use Array of string to store group of IngredientType
+    
     let data = [
         ["Brown Rice", "Romaine Lettuce", "Sweet Potato", "Whole-wheat Pasta", "Baby Spinach", "Quinoa"],
         ["Chicken Breast", "Dory", "Tilapia", "Tofu", "Rib Eye Steak", "Salmon"],

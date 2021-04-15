@@ -43,7 +43,7 @@ public class Bowl: NSObject, NSCoding {
 }
 
 // Add business case functionality
-extension Bowl{
+extension Bowl {
     
     // Computed variable, bowl type depend on how many protein quantity
     var bowlType: BowlType {
@@ -224,12 +224,17 @@ extension Bowl {
     /// Dictionary: Collection
     ///
     /// I can effectively use Collection Types in Swift
-    /// Since each Ingredients
     /// https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html
     ///
     /// - Important: `TEC072    I can effectively use Collection Types in Swift`
     ///
 
+    /// Dictionary use unique identifier known as a key to store a value which later can be referenced and looked up through the same key.
+    /// Unlike items in an array, items in a dictionary do not have a specified order.
+    /// You can use a dictionary when you need to look up values based on their identifiers
+    /// 
+    /// We will use Dictionary of Bowl which contains IngredientType enum rawValue as a key with value String and Double.
+    /// e.g the Key with Ingredient type as `Base` will have a value of an array that consist of `Brown Rice` with amount of it equal `0.0`
     
     static var dataMock: Bowl = {
         let bowl = Bowl()

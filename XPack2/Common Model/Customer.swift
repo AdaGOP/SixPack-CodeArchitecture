@@ -20,5 +20,14 @@ import Foundation
 
 struct Customer { /// This Struct will store the value of name and email into struct Customer, which the value can be accessed and modified from anywhere as a property of Customer
     var name: String = ""
-    var email: String = ""
+    
+    /// Modified by: Zein
+    /// Optional
+    ///
+    /// I know how to use Optional Values in Swift
+    /// https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
+    ///
+    /// - Important: `TEC079    I know how to use Optional Values in Swift`
+    ///
+    var email: String? // We use an optional, according to the field that email probably empty or have no value
 }

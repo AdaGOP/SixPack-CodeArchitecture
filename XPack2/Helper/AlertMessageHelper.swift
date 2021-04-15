@@ -8,4 +8,11 @@
 
 import UIKit
 
-
+extension UIViewController {
+    func popupAlert(title: String?, message: String?, actionTitles:[String?], actions:((UIAlertAction) -> Void)?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: actionTitles[0], style: .default, handler: actions)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+}

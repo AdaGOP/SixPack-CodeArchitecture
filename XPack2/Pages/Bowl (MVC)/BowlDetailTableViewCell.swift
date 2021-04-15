@@ -25,7 +25,6 @@ class BowlDetailTableViewCell: UITableViewCell {
         
         let bowlSummary = bowl.sumTotalIngredients(type: ingredientType)
         quantityLabel.text = NumberHelper().formatTruncateZeroPointDouble(for: bowlSummary)
-        
     }
 
     
