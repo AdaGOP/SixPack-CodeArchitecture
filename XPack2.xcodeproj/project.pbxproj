@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D02B7FD252C162100A09235 /* IngredientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B7FC252C162100A09235 /* IngredientType.swift */; };
-		7D02B7FF252C164400A09235 /* BowlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B7FE252C164400A09235 /* BowlType.swift */; };
 		7D02B805252C3D6500A09235 /* XPackAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B804252C3D6500A09235 /* XPackAPIHelper.swift */; };
 		7D02B807252C40B900A09235 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7D02B806252C40B900A09235 /* .gitignore */; };
-		7D05C79F2536A9FD00499D32 /* BowlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05C79E2536A9FD00499D32 /* BowlView.swift */; };
 		7D05C7A3253749B600499D32 /* XPackModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05C7A2253749B600499D32 /* XPackModal.swift */; };
 		7D05C7A525374BE900499D32 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05C7A425374BE900499D32 /* WebService.swift */; };
 		7D05C7A825374C2500499D32 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05C7A725374C2500499D32 /* Resources.swift */; };
@@ -22,7 +19,6 @@
 		7D87676D21211C4A00B0CE21 /* XPackCustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87676C21211C4A00B0CE21 /* XPackCustomNavigation.swift */; };
 		7D876775212121CD00B0CE21 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D876774212121CD00B0CE21 /* CoreDataHelper.swift */; };
 		E6479371262600640055AF4F /* AlertMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6479370262600640055AF4F /* AlertMessageHelper.swift */; };
-		E652D2FA252CC7D900EE3ACC /* IngridientChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652D2F9252CC7D900EE3ACC /* IngridientChoiceView.swift */; };
 		F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40742052117E23C00F6CD12 /* AppDelegate.swift */; };
 		F40742082117E23C00F6CD12 /* CustomerInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40742072117E23C00F6CD12 /* CustomerInformationViewController.swift */; };
 		F407420B2117E23C00F6CD12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40742092117E23C00F6CD12 /* Main.storyboard */; };
@@ -37,7 +33,6 @@
 		F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */; };
 		F4BC78062119499B00F1C758 /* Bowl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC78052119499B00F1C758 /* Bowl.swift */; };
 		F4DA8AA3211E9BE300D02626 /* NumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */; };
-		F4F2FB5B211BE4B5003898E6 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2FB5A211BE4B5003898E6 /* Customer.swift */; };
 		F4F430372119960200B2B859 /* IngredientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F430362119960200B2B859 /* IngredientData.swift */; };
 		F4F430392119B5ED00B2B859 /* BowlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F430382119B5ED00B2B859 /* BowlViewController.swift */; };
 		F4F4303C2119B80000B2B859 /* ChooseMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F4303A2119B80000B2B859 /* ChooseMenu.storyboard */; };
@@ -46,11 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7D02B7FC252C162100A09235 /* IngredientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientType.swift; sourceTree = "<group>"; };
-		7D02B7FE252C164400A09235 /* BowlType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlType.swift; sourceTree = "<group>"; };
 		7D02B804252C3D6500A09235 /* XPackAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPackAPIHelper.swift; sourceTree = "<group>"; };
 		7D02B806252C40B900A09235 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		7D05C79E2536A9FD00499D32 /* BowlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BowlView.swift; sourceTree = "<group>"; };
 		7D05C7A2253749B600499D32 /* XPackModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPackModal.swift; sourceTree = "<group>"; };
 		7D05C7A425374BE900499D32 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = XPack2/Themes/UI/WebService.swift; sourceTree = SOURCE_ROOT; };
 		7D05C7A725374C2500499D32 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
@@ -61,7 +53,6 @@
 		7D87676C21211C4A00B0CE21 /* XPackCustomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XPackCustomNavigation.swift; sourceTree = "<group>"; };
 		7D876774212121CD00B0CE21 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		E6479370262600640055AF4F /* AlertMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessageHelper.swift; sourceTree = "<group>"; };
-		E652D2F9252CC7D900EE3ACC /* IngridientChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientChoiceView.swift; sourceTree = "<group>"; };
 		F40742022117E23C00F6CD12 /* XPack2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPack2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40742052117E23C00F6CD12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40742072117E23C00F6CD12 /* CustomerInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +69,6 @@
 		F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTableViewCell.swift; sourceTree = "<group>"; };
 		F4BC78052119499B00F1C758 /* Bowl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowl.swift; sourceTree = "<group>"; };
 		F4DA8AA2211E9BE300D02626 /* NumberHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberHelper.swift; sourceTree = "<group>"; };
-		F4F2FB5A211BE4B5003898E6 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		F4F430362119960200B2B859 /* IngredientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientData.swift; sourceTree = "<group>"; };
 		F4F430382119B5ED00B2B859 /* BowlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlViewController.swift; sourceTree = "<group>"; };
 		F4F4303B2119B80000B2B859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XPack2/View/Base.lproj/ChooseMenu.storyboard; sourceTree = "<group>"; };
@@ -217,10 +207,7 @@
 		F4BC78042119497600F1C758 /* Common Model */ = {
 			isa = PBXGroup;
 			children = (
-				F4F2FB5A211BE4B5003898E6 /* Customer.swift */,
 				F4BC78052119499B00F1C758 /* Bowl.swift */,
-				7D02B7FE252C164400A09235 /* BowlType.swift */,
-				7D02B7FC252C162100A09235 /* IngredientType.swift */,
 				F4F430362119960200B2B859 /* IngredientData.swift */,
 			);
 			path = "Common Model";
@@ -241,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				F4F4303A2119B80000B2B859 /* ChooseMenu.storyboard */,
-				7D05C79E2536A9FD00499D32 /* BowlView.swift */,
 				F4FE796D211A84F60068674F /* BowlDetailTableViewCell.swift */,
 				F4F430382119B5ED00B2B859 /* BowlViewController.swift */,
 			);
@@ -254,7 +240,6 @@
 				F4FE796F211A8D8B0068674F /* IngridientChoice.storyboard */,
 				F4BC77FE2119361C00F1C758 /* IngridientSelectionViewController.swift */,
 				F4BC78022119375E00F1C758 /* IngridientTableViewCell.swift */,
-				E652D2F9252CC7D900EE3ACC /* IngridientChoiceView.swift */,
 			);
 			path = "Ingredient (MVC)";
 			sourceTree = "<group>";
@@ -355,22 +340,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D02B7FF252C164400A09235 /* BowlType.swift in Sources */,
 				F40742082117E23C00F6CD12 /* CustomerInformationViewController.swift in Sources */,
 				7D05C7A825374C2500499D32 /* Resources.swift in Sources */,
 				F432E628211E712A00C6C663 /* XPackColours.swift in Sources */,
 				7D876775212121CD00B0CE21 /* CoreDataHelper.swift in Sources */,
 				7D05C7AA25374C5D00499D32 /* StringCryptoHelper.swift in Sources */,
-				7D02B7FD252C162100A09235 /* IngredientType.swift in Sources */,
 				F4BC78062119499B00F1C758 /* Bowl.swift in Sources */,
 				E6479371262600640055AF4F /* AlertMessageHelper.swift in Sources */,
 				F4BC78032119375E00F1C758 /* IngridientTableViewCell.swift in Sources */,
 				F4BC77FF2119361C00F1C758 /* IngridientSelectionViewController.swift in Sources */,
-				7D05C79F2536A9FD00499D32 /* BowlView.swift in Sources */,
 				F4BC77FB2119306200F1C758 /* XPack.xcdatamodeld in Sources */,
 				F4F430392119B5ED00B2B859 /* BowlViewController.swift in Sources */,
 				7D05C7B125374D2800499D32 /* Sample1.swift in Sources */,
-				F4F2FB5B211BE4B5003898E6 /* Customer.swift in Sources */,
 				F4FE796E211A84F60068674F /* BowlDetailTableViewCell.swift in Sources */,
 				F4F430372119960200B2B859 /* IngredientData.swift in Sources */,
 				7D05C7AE25374D0100499D32 /* URLRequest-Extension.swift in Sources */,
@@ -380,7 +361,6 @@
 				7D05C7AC25374C8400499D32 /* Cache.swift in Sources */,
 				F4DA8AA3211E9BE300D02626 /* NumberHelper.swift in Sources */,
 				F40742062117E23C00F6CD12 /* AppDelegate.swift in Sources */,
-				E652D2FA252CC7D900EE3ACC /* IngridientChoiceView.swift in Sources */,
 				7D05C7A3253749B600499D32 /* XPackModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

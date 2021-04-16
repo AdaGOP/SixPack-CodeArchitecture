@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol IngridientCellProtocol: class {
+    func setQuantityLabel(ingridientName: String, stepper: UIStepper) -> String
+}
+
 class IngridientTableViewCell: UITableViewCell {
     
     @IBOutlet weak var ingridientStepper: UIStepper!
@@ -36,54 +40,5 @@ class IngridientTableViewCell: UITableViewCell {
         }
         
     }
-    
-    func cellConfig(withIngredients: [String], currentIndex: Int, type: IngredientType, chargeAmount: Int, isCharge: Bool, selectedIng: [String:Double]) {
-        let ingredientName = withIngredients[currentIndex]
         
-        if let image = UIImage(named: ingredientName){
-            ingredientImageView.image = image
-        }
-        
-        if let additionalPrice = IngredientData().additionalPrice[ingredientName] {
-            ingridientNameLabel.text = "\(ingredientName) (+\(additionalPrice)K)"
-        } else {
-            ingridientNameLabel.text = ingredientName
-        }
-        
-        if type == .protein {
-            ingridientStepper.maximumValue = 3.0
-        } else {
-            ingridientStepper.maximumValue = 5.0
-        }
-        
-        if let ingridientQty = selectedIng[ingredientName] {
-            ingridientStepper.value = ingridientQty
-            ingridientQuantityLabel.text = getDisplayedQuantityValueFromStepper(stepperValue: ingridientQty, type: type)
-        } else {
-            ingridientStepper.value = 0.0
-            ingridientQuantityLabel.text = "0"
-        }
-        
-        if isCharge {
-            priceLabel.text = "+\(chargeAmount)K IDR"
-        } else {
-            priceLabel.text = "+0K IDR"
-        }
-    }
-    
-    func getDisplayedQuantityValueFromStepper(stepperValue: Double, type: IngredientType) -> String {
-        if type == .protein {
-            if stepperValue == 1.0 {
-                return "0.5"
-            } else if stepperValue > 1 {
-                return "\(Int(stepperValue - 1))"
-            }
-        }
-        return "\(Int(stepperValue))"
-    }
-        
-}
-
-protocol IngridientCellProtocol: class {
-    func setQuantityLabel(ingridientName: String, stepper: UIStepper) -> String
 }

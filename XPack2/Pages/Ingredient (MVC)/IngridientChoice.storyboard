@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pCO-QV-t0w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pCO-QV-t0w">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
         <scene sceneID="KRV-Ya-oTC">
             <objects>
                 <viewController id="pCO-QV-t0w" customClass="IngridientSelectionViewController" customModule="XPack2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wuK-xV-e0t" customClass="IngridientChoiceView" customModule="XPack2" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="wuK-xV-e0t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -59,7 +59,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6eb-UZ-IVG">
-                                                    <rect key="frame" x="266" y="30.666666666666671" width="94" height="29"/>
+                                                    <rect key="frame" x="265" y="30.666666666666671" width="94" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="94" id="Z7K-tc-HIR"/>
                                                         <constraint firstAttribute="height" constant="29" id="lw4-TH-vNo"/>
@@ -70,7 +70,7 @@
                                                     </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbt-kj-yu4">
-                                                    <rect key="frame" x="233.66666666666666" y="36.666666666666664" width="22.333333333333343" height="17"/>
+                                                    <rect key="frame" x="232.66666666666666" y="36.666666666666664" width="22.333333333333343" height="17"/>
                                                     <fontDescription key="fontDescription" name="SFCompactText-Regular" family="SF Compact Text" pointSize="14"/>
                                                     <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -130,6 +130,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="wrR-67-MKN"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9vW-GK-I84" firstAttribute="leading" secondItem="wrR-67-MKN" secondAttribute="leading" id="8jK-QK-N2c"/>
@@ -140,18 +141,14 @@
                             <constraint firstItem="ag0-WS-QbQ" firstAttribute="top" secondItem="wrR-67-MKN" secondAttribute="top" id="r5g-zf-5vL"/>
                             <constraint firstItem="9vW-GK-I84" firstAttribute="trailing" secondItem="wrR-67-MKN" secondAttribute="trailing" id="u1D-Wk-MnO"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="wrR-67-MKN"/>
-                        <connections>
-                            <outlet property="priceLabel" destination="zKk-6c-iJJ" id="LDC-QP-si3"/>
-                            <outlet property="tableView" destination="ag0-WS-QbQ" id="TTZ-uJ-0RK"/>
-                            <outlet property="totalPriceView" destination="9vW-GK-I84" id="ejs-Ml-eQj"/>
-                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="glW-Q4-ahf"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ingredientsView" destination="wuK-xV-e0t" id="ZlQ-jL-wwH"/>
+                        <outlet property="priceLabel" destination="zKk-6c-iJJ" id="Vg2-pl-g73"/>
+                        <outlet property="tableView" destination="ag0-WS-QbQ" id="0FI-hS-iLN"/>
+                        <outlet property="totalPriceView" destination="9vW-GK-I84" id="ckf-A0-T2U"/>
                         <segue destination="Ber-n2-aqx" kind="unwind" identifier="unwindToBowlPage" unwindAction="unwindToBowlPage:" id="DCC-23-3DP"/>
                     </connections>
                 </viewController>

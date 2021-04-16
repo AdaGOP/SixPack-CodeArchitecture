@@ -8,42 +8,51 @@
 
 import Foundation
 
-public class Bowl: NSObject, NSCoding {
+/// Modified by: Zein
+/// Enumeration
+///
+/// I know how to work with enumeration in Swift
+/// https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html
+///
+/// - Important: `TEC069    I know how to work with enumeration in Swift`
+///
 
-    var ingredients: [IngredientType: [String:Double] ]  = [:]
-    
-    override init(){
-        super.init()
-    }
-    
-    public func encode(with aCoder: NSCoder) {
-        var temp = [String:[String:Double]]()
-        for (key, value) in ingredients {
-            
-            temp[key.rawValue] = value
-        }
-        
-        aCoder.encode(temp, forKey: "ingredients")
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-
-        //Works
-        guard let tempData = aDecoder.decodeObject(forKey: "ingredients") as? [String:[String:Double]] else {return }
-
-        //return it to enum
-        var tempResult = [IngredientType:[String:Double]]()
-        for (key, value) in tempData {
-            tempResult[IngredientType(rawValue: key)!] = value
-        }
-        
-        self.ingredients = tempResult
-        
-    }
+enum BowlType: Int {
+    case petite = 75
+    case regular = 100
+    case large = 125
 }
 
-// Add business case functionality
-extension Bowl {
+public class Bowl: NSObject {
+    
+    /// Modified by: Zein
+    /// Dictionary: Collection
+    ///
+    /// I can effectively use Collection Types in Swift
+    /// https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html
+    ///
+    /// - Important: `TEC072    I can effectively use Collection Types in Swift`
+    ///
+
+    /// Dictionary use unique identifier known as a key to store a value which later can be referenced and looked up through the same key.
+    /// Unlike items in an array, items in a dictionary do not have a specified order.
+    /// You can use a dictionary when you need to look up values based on their identifiers
+    ///
+    /// We will use Dictionary of Bowl which contains IngredientType enum rawValue as a key with value String and Double.
+    /// e.g the Key with Ingredient type as `Base` will have a value of an array that consist of `Brown Rice` with amount of it equal `0.0`
+    
+    static var dataMock: Bowl = {
+        let bowl = Bowl()
+        bowl.ingredients[IngredientType.base] = ["Brown Rice": 0.0, "Romaine Lettuce": 0.0, "Sweet Potato": 0.0, "Whole-wheat Pasta": 1.0, "Baby Spinach": 0.0, "Quinoa": 0.0]
+        bowl.ingredients[IngredientType.protein] = ["Chicken Breast": 1.0, "Dory": 0.0, "Tilapia": 0.0, "Tofu": 0.0, "Rib Eye Steak": 0.0, "Salmon": 1.0]
+        bowl.ingredients[IngredientType.supplement] = ["Baby Corn": 1.0, "Bell Papers": 0.0, "Broccoli": 1.0, "Butter Bean": 1.0, "Button Mushrooms": 0.0, "Carrots": 1.0, "Cherry Tomatoes": 0.0, "Couscous": 0.0, "Egg Whites": 0.0, "Kimchi": 0.0, "Onsen Egg": 0.0, "Pumpkin": 0.0, "Spicy Edamame": 0.0, "Sweet Corn": 0.0, "Wakame": 1.0, "Zucchini": 1.0, "Avocado": 1.0]
+        bowl.ingredients[IngredientType.topping] = ["Almonds": 1.0, "Furikake": 0.0, "Garlic": 0.0, "Mixed Seeds": 1.0, "Raisins": 0.0, "Tortilla": 0.0]
+        bowl.ingredients[IngredientType.dressing] = ["Barbeque": 1.0, "Green Curry": 1.0, "Mint Yogurt": 1.0, "Miso Mustard": 0.0, "Pesto Vinaigrette": 0.0, "Romesco": 0.0, "Sesame Peanut": 0.0, "Thai": 0.0]
+        return bowl
+    }()
+
+    /// Array of Dictionary
+    var ingredients: [IngredientType: [String:Double] ]  = [:]
     
     // Computed variable, bowl type depend on how many protein quantity
     var bowlType: BowlType {
@@ -110,6 +119,11 @@ extension Bowl {
             
             return finalPrice + bowlType.rawValue
         }
+    }
+    
+    
+    override init(){
+        super.init()
     }
     
     // total sum ingredient for each type
@@ -215,34 +229,4 @@ extension Bowl {
         
         return ingredientBase
     }
-}
-
-
-extension Bowl {
-    
-    /// Modified by: Zein
-    /// Dictionary: Collection
-    ///
-    /// I can effectively use Collection Types in Swift
-    /// https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html
-    ///
-    /// - Important: `TEC072    I can effectively use Collection Types in Swift`
-    ///
-
-    /// Dictionary use unique identifier known as a key to store a value which later can be referenced and looked up through the same key.
-    /// Unlike items in an array, items in a dictionary do not have a specified order.
-    /// You can use a dictionary when you need to look up values based on their identifiers
-    /// 
-    /// We will use Dictionary of Bowl which contains IngredientType enum rawValue as a key with value String and Double.
-    /// e.g the Key with Ingredient type as `Base` will have a value of an array that consist of `Brown Rice` with amount of it equal `0.0`
-    
-    static var dataMock: Bowl = {
-        let bowl = Bowl()
-        bowl.ingredients[IngredientType.base] = ["Brown Rice": 0.0, "Romaine Lettuce": 0.0, "Sweet Potato": 0.0, "Whole-wheat Pasta": 1.0, "Baby Spinach": 0.0, "Quinoa": 0.0]
-        bowl.ingredients[IngredientType.protein] = ["Chicken Breast": 1.0, "Dory": 0.0, "Tilapia": 0.0, "Tofu": 0.0, "Rib Eye Steak": 0.0, "Salmon": 1.0]
-        bowl.ingredients[IngredientType.supplement] = ["Baby Corn": 1.0, "Bell Papers": 0.0, "Broccoli": 1.0, "Butter Bean": 1.0, "Button Mushrooms": 0.0, "Carrots": 1.0, "Cherry Tomatoes": 0.0, "Couscous": 0.0, "Egg Whites": 0.0, "Kimchi": 0.0, "Onsen Egg": 0.0, "Pumpkin": 0.0, "Spicy Edamame": 0.0, "Sweet Corn": 0.0, "Wakame": 1.0, "Zucchini": 1.0, "Avocado": 1.0]
-        bowl.ingredients[IngredientType.topping] = ["Almonds": 1.0, "Furikake": 0.0, "Garlic": 0.0, "Mixed Seeds": 1.0, "Raisins": 0.0, "Tortilla": 0.0]
-        bowl.ingredients[IngredientType.dressing] = ["Barbeque": 1.0, "Green Curry": 1.0, "Mint Yogurt": 1.0, "Miso Mustard": 0.0, "Pesto Vinaigrette": 0.0, "Romesco": 0.0, "Sesame Peanut": 0.0, "Thai": 0.0]
-        return bowl
-    }()
 }

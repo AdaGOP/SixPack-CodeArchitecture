@@ -23,7 +23,7 @@
         <scene sceneID="1mN-Gj-RFu">
             <objects>
                 <viewController id="ZCQ-GD-ia1" customClass="BowlViewController" customModule="XPack2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tn0-IK-hBh" customClass="BowlView" customModule="XPack2" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="tn0-IK-hBh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -148,18 +148,16 @@
                             <constraint firstItem="nTa-Sf-5aB" firstAttribute="leading" secondItem="Fss-OW-5Qd" secondAttribute="leading" constant="10" id="stc-FH-RDZ"/>
                             <constraint firstItem="tYd-2K-glV" firstAttribute="leading" secondItem="Fss-OW-5Qd" secondAttribute="leading" id="vWG-qz-AAl"/>
                         </constraints>
-                        <connections>
-                            <outlet property="bowlContentTableView" destination="htd-va-rHZ" id="fnL-rV-M1z"/>
-                            <outlet property="bowlTypeLabel" destination="X35-oK-vek" id="xOx-TF-Lwl"/>
-                            <outlet property="buildInfoLabel" destination="Ndu-1j-QH4" id="DUm-Wr-7I7"/>
-                            <outlet property="priceLabel" destination="gw8-8L-cZz" id="5Vi-56-6Bk"/>
-                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="VUo-R0-De1"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="bowlView" destination="tn0-IK-hBh" id="ANA-o7-Jl0"/>
+                        <outlet property="bowlContentTableView" destination="htd-va-rHZ" id="4by-ia-iWP"/>
+                        <outlet property="bowlTypeLabel" destination="X35-oK-vek" id="OTL-En-wbG"/>
+                        <outlet property="buildInfoLabel" destination="Ndu-1j-QH4" id="Ghx-UG-L5O"/>
+                        <outlet property="priceLabel" destination="gw8-8L-cZz" id="Fji-ZE-hCz"/>
+                        <outlet property="view" destination="tn0-IK-hBh" id="ubw-ZX-FUW"/>
                         <segue destination="cNC-6h-Hi4" kind="show" identifier="IngridientChoiceSegue" id="SCU-NX-VQ8"/>
                     </connections>
                 </viewController>

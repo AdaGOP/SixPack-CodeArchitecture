@@ -10,8 +10,10 @@ import UIKit
 
 class IngridientSelectionViewController: UIViewController {
     
-    @IBOutlet weak var ingredientsView: IngridientChoiceView!
-    
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var totalPriceView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+
     /// Modified by: Zein
     /// Enumeration
     ///
@@ -50,13 +52,34 @@ class IngridientSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
+        
         if bowl.ingredients[ingredientType] != nil {
             selectedIngredients = bowl.ingredients[ingredientType]!
         }
         
-        ingredientsView.updatePriceBarItem(price: bowl.price)
+        updatePriceBarItem(price: bowl.price)
         
         (isChargedForAdditionalServing, additionalCharge) = bowl.isChargedForAdditionalServing(type: ingredientType)
+    }
+    
+    func updatePriceBarItem(price: Int){
+        priceLabel?.text = "\(price)"
+    }
+    
+    func setupView() {
+        self.view.backgroundColor = .white
+    }
+    
+    func getDisplayedQuantityValueFromStepper(stepperValue: Double, type: IngredientType) -> String {
+        if type == .protein {
+            if stepperValue == 1.0 {
+                return "0.5"
+            } else if stepperValue > 1 {
+                return "\(Int(stepperValue - 1))"
+            }
+        }
+        return "\(Int(stepperValue))"
     }
     
 }
@@ -69,13 +92,40 @@ extension IngridientSelectionViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IngridientCell", for: indexPath) as! IngridientTableViewCell
-        cell.cellConfig(withIngredients: ingredients,
-                        currentIndex: indexPath.row,
-                        type: ingredientType,
-                        chargeAmount: self.additionalCharge,
-                        isCharge: isChargedForAdditionalServing,
-                        selectedIng: selectedIngredients)
+        let ingredientName = ingredients[indexPath.row]
+        
+        if let image = UIImage(named: ingredientName){
+            cell.ingredientImageView.image = image
+        }
+        
+        if let additionalPrice = IngredientData().additionalPrice[ingredientName] {
+            cell.ingridientNameLabel.text = "\(ingredientName) (+\(additionalPrice)K)"
+        } else {
+            cell.ingridientNameLabel.text = ingredientName
+        }
+        
+        if ingredientType == .protein {
+            cell.ingridientStepper.maximumValue = 3.0
+        } else {
+            cell.ingridientStepper.maximumValue = 5.0
+        }
+        
+        if let ingridientQty = selectedIngredients[ingredientName] {
+            cell.ingridientStepper.value = ingridientQty
+            cell.ingridientQuantityLabel.text = getDisplayedQuantityValueFromStepper(stepperValue: ingridientQty, type: ingredientType)
+        } else {
+            cell.ingridientStepper.value = 0.0
+            cell.ingridientQuantityLabel.text = "0"
+        }
+        
+        if isChargedForAdditionalServing {
+            cell.priceLabel.text = "+\(self.additionalCharge)K IDR"
+        } else {
+            cell.priceLabel.text = "+0K IDR"
+        }
+        
         cell.cellProtocol = self
+        
         return cell
     }
 }
@@ -88,13 +138,13 @@ extension IngridientSelectionViewController: IngridientCellProtocol {
         self.popupAlert(title: "Notice", message: "When you change the value of it's quantity, it will update the value of \(ingridientName) in the Array, and use it's value to calculate price at the bottom.", actionTitles: ["Ok"]) { (action) in
             self.selectedIngredients[ingridientName] = stepper.value
             self.bowl.ingredients[self.ingredientType] = self.selectedIngredients
-            self.ingredientsView.updatePriceBarItem(price: self.bowl.price)
+            self.updatePriceBarItem(price: self.bowl.price)
             
             let (isCharged, chargeAmount) = self.bowl.isChargedForAdditionalServing(type: self.ingredientType)
             if isCharged != self.isChargedForAdditionalServing {
                 self.isChargedForAdditionalServing = isCharged
                 self.additionalCharge = chargeAmount
-                self.ingredientsView.tableView?.reloadData()
+                self.tableView?.reloadData()
             }
         }
         

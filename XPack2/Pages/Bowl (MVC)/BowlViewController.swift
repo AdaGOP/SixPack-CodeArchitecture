@@ -8,11 +8,29 @@
 
 import UIKit
 
+/// Modified by: Zein
+/// Enumeration
+///
+/// I know how to work with enumeration in Swift
+/// https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html
+///
+/// - Important: `TEC069    I know how to work with enumeration in Swift`
+///
+
+/// Aditional knowledge from here `CaseIterable`
+/// We use it, in order to access all values inside `IngredientType` enum and return it to View
+
+enum IngredientType: String, CaseIterable {
+    case base, protein, supplement, topping, dressing
+}
+
 class BowlViewController: UIViewController {
     
-    
-    @IBOutlet weak var bowlView : BowlView!
-    
+    @IBOutlet weak var bowlContentTableView: UITableView!
+    @IBOutlet weak var buildInfoLabel: UILabel!
+    @IBOutlet weak var bowlTypeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+
     /// Modified by: Zein
     /// Class: Reference type
     ///
@@ -27,7 +45,7 @@ class BowlViewController: UIViewController {
     
     var bowl: Bowl = Bowl.dataMock {
         didSet {
-            bowlView.setView(with: customer, bowl: bowl)
+            setView(with: customer, bowl: bowl)
         }
     }
     
@@ -54,11 +72,28 @@ class BowlViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setInitialView()
         showAlertMessage()
-        bowlView.bowlContentTableView?.delegate = self
-        bowlView.bowlContentTableView?.dataSource = self
+        bowlContentTableView?.delegate = self
+        bowlContentTableView?.dataSource = self
         
+    }
+    
+    func setInitialView(){
+        bowlContentTableView?.estimatedRowHeight = 60
+        bowlContentTableView?.rowHeight = UITableView.automaticDimension
+        
+        bowlTypeLabel.textColor = XPackColours.secondary
+        
+        self.view.backgroundColor = UIColor.white
+    }
+    
+    func setView(with customer: Customer, bowl: Bowl){
+        let (bowlTypeDescription, bowlTypeInfo) = bowl.getBowlTypeDetailInfo()
+        bowlTypeLabel?.text = "Hi \(customer.name),"
+        buildInfoLabel?.text = "You have *Category* as `\(bowlTypeDescription) bowl`. \(bowlTypeInfo)"
+        bowlContentTableView?.reloadData()
+        priceLabel?.text = "\(bowl.price)K"
     }
 
     func showAlertMessage(){
@@ -67,7 +102,7 @@ class BowlViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        bowlView.setView(with: customer, bowl: bowl)
+        setView(with: customer, bowl: bowl)
     }
     
     
@@ -91,7 +126,13 @@ extension BowlViewController: UITableViewDelegate, UITableViewDataSource {
     // table view mandatory delegate, return cell to be drawn
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BowlDetailCell", for: indexPath) as! BowlDetailTableViewCell
-        cell.setupCellFor(bowl: bowl, type: bowlIngredients[indexPath.row])
+
+        cell.titleLabel.text = bowlIngredients[indexPath.row].rawValue.capitalized
+        cell.subtitleLabel.text = bowl.reduceIngridientStringFor(type: bowlIngredients[indexPath.row])
+        
+        let bowlSummary = bowl.sumTotalIngredients(type: bowlIngredients[indexPath.row])
+        cell.quantityLabel.text = NumberHelper().formatTruncateZeroPointDouble(for: bowlSummary)
+
         return cell
     }
     
